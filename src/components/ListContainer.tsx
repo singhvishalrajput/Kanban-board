@@ -53,7 +53,6 @@ const ListContainer = ({ board }: ListContainerProps) => {
     // Track touch position to determine horizontal scrolling intent
     let startX = 0;
     let startY = 0;
-    let startTime = 0;
     let isScrolling = false;
     
     const handleTouchStart = (e: TouchEvent) => {
@@ -61,7 +60,6 @@ const ListContainer = ({ board }: ListContainerProps) => {
       
       startX = e.touches[0].clientX;
       startY = e.touches[0].clientY;
-      startTime = Date.now();
       isScrolling = false;
     };
     
