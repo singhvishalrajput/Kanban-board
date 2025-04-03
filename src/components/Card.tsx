@@ -34,15 +34,16 @@ const Card = ({ card, labelColors }: CardProps) => {
           </div>
         )}
         <h4 className="text-sm font-md mb-1">{card.title}</h4>
-        
+
         {/* Add description display here */}
         {card.description && (
           <p className="text-xs text-gray-400 mb-6 ">{card.description}</p>
         )}
-        
+
         <div className="flex items-center justify-between mt-2 mb-2">
           <div className="flex -space-x-1">
-            {card.members && card.members.length > 0 && (
+            {card.members &&
+              card.members.length > 0 &&
               card.members.map((member) => (
                 <img
                   key={member.id}
@@ -50,8 +51,7 @@ const Card = ({ card, labelColors }: CardProps) => {
                   alt="Member"
                   className="w-6 h-6 rounded-full border border-white"
                 />
-              ))
-            )}
+              ))}
             <div className="w-6 h-6 rounded-full bg-black flex items-center justify-center">
               <Plus className="h-4 w-4 text-white" />
             </div>

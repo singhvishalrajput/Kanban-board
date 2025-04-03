@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
 
 * {
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
 /* Custom scrollbar for the list container (desktop only) */
@@ -43,11 +43,12 @@
 
 /* For IE, Edge and Firefox */
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
-html, body {
+html,
+body {
   overscroll-behavior: none;
   height: 100%;
   width: 100%;
@@ -86,13 +87,15 @@ body {
 /* Mobile-specific styles */
 @media (max-width: 768px) {
   /* Reset everything first */
-  html, body, #root {
+  html,
+  body,
+  #root {
     position: static !important;
     overflow: visible !important;
     height: 100% !important;
     width: 100% !important;
   }
-  
+
   /* Main scrolling container must scroll horizontally */
   .flex.pb-6.overflow-x-auto {
     overflow-x: scroll !important;
@@ -104,25 +107,25 @@ body {
     flex-direction: row !important;
     min-height: calc(100vh - 150px); /* Keep it tall enough */
   }
-  
+
   /* Individual list columns should scroll vertically */
   .min-w-\[272px\].flex.flex-col {
     height: calc(100vh - 150px) !important; /* Fixed height for columns */
     overflow-y: visible !important; /* Let content flow */
   }
-  
+
   /* Card container needs to scroll vertically */
   .pb-2.space-y-2.overflow-y-auto {
     height: auto !important;
     max-height: none !important;
     overflow-y: visible !important; /* Let content be visible */
   }
-  
+
   /* Hide scrollbars but maintain functionality */
   .custom-scroll::-webkit-scrollbar {
     display: none !important;
   }
-  
+
   .custom-scroll {
     scrollbar-width: none !important;
   }

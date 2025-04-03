@@ -1,54 +1,110 @@
-# React + TypeScript + Vite
+# Kanban Board - Trello Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive Kanban board application built with React that mimics the core functionality of Trello. This project was created as part of the Rallybase React JS Intern Assignment.
 
-Currently, two official plugins are available:
+![Kanban Board Screenshot](./public/trello-clone-img.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Responsive Design**: Mobile-first approach that works seamlessly on all screen sizes
+- **Interactive Lists**: Multiple customizable lists to organize tasks
+- **Detailed Cards**: Cards with titles, descriptions, labels, and member assignments
+- **Visual Metrics**: Track comments, attachments, and votes on each card
+- **Custom Scrolling**: Optimized scrolling behavior for both desktop and mobile
+- **API Integration**: Fetches data from a provided API endpoint
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Live Demo
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+[View the deployed application](https://kanban-board1-red.vercel.app/)
+
+## Technologies Used
+
+- React.js
+- TypeScript
+- Tailwind CSS
+- Lucide React (for icons)
+- Fetch API
+
+## Running the Project Locally
+
+### Prerequisites
+
+- Node.js (v14 or later)
+- npm or yarn
+
+### Installation Steps
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/singhvishalrajput/Kanban-board.git
+   cd kanban-board
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:5173` or the port shown in your terminal.
+
+## Project Structure
+
+```
+src/
+├── assets/        # Static assets and images
+├── components/    # React components
+│   ├── BoardHeader.tsx
+│   ├── BoardView.tsx
+│   ├── Card.tsx
+│   ├── List.tsx
+│   └── ListContainer.tsx
+├── types/         # TypeScript type definitions
+├── App.tsx        # Main application component
+└── index.css      # Global styles
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Component Overview
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **BoardView**: Main container for the entire board
+- **BoardHeader**: Navigation and board information
+- **ListContainer**: Horizontal scrollable container for lists
+- **List**: Individual columns containing cards
+- **Card**: Task cards with details, labels, and metrics
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## API Integration
+
+The application fetches data from a custom API endpoint that returns the board structure, lists, and cards. The response is processed and displayed according to the Figma design.
+
+## Responsive Design
+
+The application uses a mobile-first approach with:
+- Horizontal scrolling for lists on mobile devices
+- Vertical scrolling for cards within lists
+- Custom scrollbar styling for desktop views
+- Touch-optimized scrolling for mobile devices
+
+## Challenges and Solutions
+
+- **Mobile Scrolling**: Implemented custom scroll behavior with `overscroll-behavior` and `-webkit-overflow-scrolling: touch` for smooth iOS scrolling
+- **Dynamic Height**: Used CSS calc() functions to ensure proper container heights across different screen sizes
+- **Performance**: Optimized rendering of lists and cards to maintain smooth scrolling
+
+## Future Improvements
+
+- Drag and drop functionality for cards and lists
+- Card creation and editing
+- User authentication
+- Real-time collaboration features
+
+## Contact
+
+For any questions or feedback, please reach out at [your-email@example.com](mailto:singh287686@gmail.com)

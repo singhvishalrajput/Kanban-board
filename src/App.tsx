@@ -11,7 +11,9 @@ function App() {
     const fetchBoardData = async () => {
       try {
         setLoading(true);
-        const response = await fetch("https://json-data-api-4ry2.onrender.com/api/data",);
+        const response = await fetch(
+          "https://json-data-api-4ry2.onrender.com/api/data"
+        );
         if (!response.ok) {
           throw new Error("Failed to fetch board data");
         }
