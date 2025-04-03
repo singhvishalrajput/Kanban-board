@@ -4,7 +4,7 @@ import { Board } from "../types";
 import { Search, X, Heart } from "lucide-react";
 import globe from "../assets/globe-2-outline.png"
 import { useState } from "react";
-import hard from "../assets/hard.png";
+import hard from "../assets/Hard.png";
 import add from "../assets/plus-circle-outline.png"
 import bell from "../assets/bell-outline.png"
 import alert from "../assets/alert-circle-outline.png"
