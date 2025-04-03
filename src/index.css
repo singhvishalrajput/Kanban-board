@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+* {
+  font-family: 'Poppins';
+}
+
+/* Custom scrollbar for the list container (desktop only) */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 8px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* For Firefox */
+.overflow-x-auto {
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c1 #f1f1f1;
+}
+
+/* This CSS ensures each list column can scroll independently */
+.overflow-y-auto {
+  overflow-y: auto;
+  max-height: calc(100vh - 150px); /* Adjust based on header height */
+}
+
+/* Add this to your global CSS file */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+html, body {
+  overscroll-behavior: none;
+  height: 100%;
+  width: 100%;
+}
+
+/* For iOS Safari scrolling */
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Make sure root takes full height */
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+/* Add this class to your scrollable containers */
+.custom-scroll {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* Prevent overscroll but allow normal scrolling */
+.no-overscroll {
+  overscroll-behavior: contain;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 640px) {
+  .flex-col-mobile {
+    flex-direction: column;
+  }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  /* Reset everything first */
+  html, body, #root {
+    position: static !important;
+    overflow: visible !important;
+    height: 100% !important;
+    width: 100% !important;
+  }
+  
+  /* Main scrolling container must scroll horizontally */
+  .flex.pb-6.overflow-x-auto {
+    overflow-x: scroll !important;
+    overflow-y: hidden !important; /* Prevent vertical scrolling at this level */
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-x !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    min-height: calc(100vh - 150px); /* Keep it tall enough */
+  }
+  
+  /* Individual list columns should scroll vertically */
+  .min-w-\[272px\].flex.flex-col {
+    height: calc(100vh - 150px) !important; /* Fixed height for columns */
+    overflow-y: visible !important; /* Let content flow */
+  }
+  
+  /* Card container needs to scroll vertically */
+  .pb-2.space-y-2.overflow-y-auto {
+    height: auto !important;
+    max-height: none !important;
+    overflow-y: visible !important; /* Let content be visible */
+  }
+  
+  /* Hide scrollbars but maintain functionality */
+  .custom-scroll::-webkit-scrollbar {
+    display: none !important;
+  }
+  
+  .custom-scroll {
+    scrollbar-width: none !important;
+  }
+}
