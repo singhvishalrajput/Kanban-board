@@ -9,7 +9,7 @@ import add from "../assets/plus-circle-outline.png"
 import bell from "../assets/bell-outline.png"
 import alert from "../assets/alert-circle-outline.png"
 
-import logo from "../assets/logo.png";
+import logo from "../assets/Logo.png";
 import trellomarkblue from "../assets/trello-mark-blue.png";
 
 interface BoardHeaderProps {
