@@ -107,4 +107,4 @@ The application uses a mobile-first approach with:
 
 ## Contact
 
-For any questions or feedback, please reach out at [your-email@example.com](mailto:singh287686@gmail.com)
+For any questions or feedback, please reach out at [iamvishalrajput31@gmail.com](mailto:iamvishalrajput31@gmail.com)
