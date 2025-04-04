@@ -15,7 +15,7 @@ A responsive Kanban board application built with React that mimics the core func
 
 ## Live Demo
 
-[View the deployed application](https://kanban-board1-red.vercel.app/)
+[View the deployed application](https://kanban-board-assignment1.vercel.app/)
 
 ## Technologies Used
 
