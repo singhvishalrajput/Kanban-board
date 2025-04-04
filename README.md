@@ -37,7 +37,7 @@ A responsive Kanban board application built with React that mimics the core func
 1. Clone the repository:
    ```bash
    git clone https://github.com/singhvishalrajput/Kanban-board.git
-   cd kanban-board
+   cd Kanban-board
    ```
 
 2. Install dependencies:
@@ -98,12 +98,6 @@ The application uses a mobile-first approach with:
 - **Dynamic Height**: Used CSS calc() functions to ensure proper container heights across different screen sizes
 - **Performance**: Optimized rendering of lists and cards to maintain smooth scrolling
 
-## Future Improvements
-
-- Drag and drop functionality for cards and lists
-- Card creation and editing
-- User authentication
-- Real-time collaboration features
 
 ## Contact
 
